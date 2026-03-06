@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax calculator</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            color: #f8f8ff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #parent {
+            background: rgba(30, 30, 40, 0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            min-width: 340px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        label {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #b2b8c6;
+        }
+        input[type="number"] {
+            padding: 0.6rem 1rem;
+            border-radius: 0.7rem;
+            border: none;
+            background: #23272f;
+            color: #f8f8ff;
+            font-size: 1rem;
+            outline: none;
+            transition: box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        input[type="number"]:focus {
+            box-shadow: 0 0 0 2px #6c63ff;
+        }
+        button[type="submit"] {
+            margin-top: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 0.7rem;
+            background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(76, 110, 245, 0.15);
+            transition: background 0.2s, transform 0.1s;
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+    </style>
+</head>
+<body  style="background-color: black ; color: aliceblue;  font-size: 20px;  display:  flex ;  justify-content: center ;  align-items: center ; height: 100vh;">
+    <div id="parent">
+        <form>
+            <label for="income">Income:</label>
+            <input style=" margin: 10px; padding: 10px;" type="number" id="income" placeholder="Enter income">
+           
+          <button onclick="calculateTax(event)" type="submit">Calculate</button>
+
+            Tax Amount : <span id="Taxamount"></span>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
