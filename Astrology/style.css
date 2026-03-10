@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    padding: 32px 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #6a4caf;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-weight: 500;
+    color: #4b3f72;
+    margin-bottom: 6px;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bdbdbd;
+    background: #f7f7fa;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #6a4caf;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(90deg, #6a4caf 0%, #8ec5fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #8ec5fc 0%, #6a4caf 100%);
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 16px 8px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}

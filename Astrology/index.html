@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+</head>
+<body>
+    
+    <link rel="stylesheet" href="style.css">
+    <div class="container">
+        <h2>Astrology Prediction Form</h2>
+        <form id="astrologyForm">
+            <label for="inputName">Name</label>
+            <input type="text" id="inputName" name="name" required>
+
+            <label for="inputSurname">Surname</label>
+            <input type="text" id="inputSurname" name="surname" required>
+
+            <label for="inputBirthDate">Birth Date</label>
+            <input type="text" id="inputBirthDate" name="birthdate" required pattern="\d{2}" maxlength="2" placeholder="DD">
+
+            <label for="inputBirthMonth">Birth Month</label>
+            <select id="inputBirthMonth" name="birthmonth" required>
+                <option value="">Select Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <label for="inputBirthYear">Birth Year</label>
+            <input type="text" id="inputBirthYear" name="birthyear" required pattern="\d{4}" maxlength="4" placeholder="YYYY">
+
+            <button type="submit">Get Prediction</button>
+        </form>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
